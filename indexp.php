@@ -1,5 +1,5 @@
 <?php
-
+ob_start();
 if(isset($_GET['input_url']))
 	{
 	$input_url = @$_GET['input_url'];
@@ -47,7 +47,7 @@ if(isset($_GET['input_url']))
 											);
 			}
 
-
+ob_end_clean();
 			$filename = 'review.csv';
 			header("Content-type: text/csv");
 			header("Content-Disposition: attachment;filename=$filename");
