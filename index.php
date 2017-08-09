@@ -1,23 +1,4 @@
 <?php
-ob_start();
-
-echo '
-<!DOCTYPE html>
-<html>
-<head>
-<title></title>
-</head>
-<body>
-
-<form method="GET" action="">
-	<input type="text" name="input_url" required="required">
-	<input type="submit" value="submit">
-
-</form>
-</body>
-</html>
-
-';
 
 if(isset($_GET['input_url']))
 	{
@@ -66,7 +47,6 @@ if(isset($_GET['input_url']))
 											);
 			}
 
-			ob_end_clean();
 
 			$filename = 'review.csv';
 			header("Content-type: text/csv");
